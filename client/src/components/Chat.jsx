@@ -20,7 +20,7 @@ const Chat = () => {
 
         try {
             // Make the API request to the backend
-            const res = await axios.post('http://localhost:3000/api/content', { question: query });
+            const res = await axios.post('https://ai-gpt-0k8e.onrender.com/api/content', { question: query });
             const cleanedResponse = formatResponse(res.data.result || "No response generated");
             setResponse(cleanedResponse); // Store the formatted response
             setCopied(false); // Reset copied state after fetching a new response
